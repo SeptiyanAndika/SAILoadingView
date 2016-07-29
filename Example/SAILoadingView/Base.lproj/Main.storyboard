@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ips-Fr-rfu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="3tL-qb-x7g">
+            <objects>
+                <navigationController id="Ips-Fr-rfu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i1G-Z4-niU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="s9O-WE-xYo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhp-pD-l5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-867" y="213"/>
+        </scene>
+        <!--SAILoadingView-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SAILoadingView_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +32,140 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myT-rO-wz7">
+                                <rect key="frame" x="200" y="285" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Xz1-qp-kfq"/>
+                                    <constraint firstAttribute="height" constant="30" id="mta-8x-SMo"/>
+                                </constraints>
+                                <state key="normal" title="Basic Loading View"/>
+                                <connections>
+                                    <segue destination="Vjk-aH-aNM" kind="show" id="sz1-UI-nuQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPz-9k-1Kw">
+                                <rect key="frame" x="200" y="247" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="PWI-gN-z94"/>
+                                    <constraint firstAttribute="height" constant="30" id="rqk-J0-PBg"/>
+                                </constraints>
+                                <state key="normal" title="Show Error Loading View "/>
+                                <connections>
+                                    <segue destination="moC-dL-cpW" kind="show" id="9QR-8c-apf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAO-6V-Mpu">
+                                <rect key="frame" x="200" y="323" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AO8-fc-3OA"/>
+                                    <constraint firstAttribute="width" constant="200" id="Zjo-g2-eqz"/>
+                                </constraints>
+                                <state key="normal" title="Retry Loading View"/>
+                                <connections>
+                                    <segue destination="uNT-ia-i1x" kind="show" id="DyW-84-Z5o"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RAO-6V-Mpu" firstAttribute="top" secondItem="myT-rO-wz7" secondAttribute="bottom" constant="8" id="9yN-YT-PNZ"/>
+                            <constraint firstItem="RAO-6V-Mpu" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="APy-w7-yCH"/>
+                            <constraint firstItem="myT-rO-wz7" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="JBd-kn-dNN"/>
+                            <constraint firstItem="myT-rO-wz7" firstAttribute="top" secondItem="oPz-9k-1Kw" secondAttribute="bottom" constant="8" id="kFb-MA-dIR"/>
+                            <constraint firstItem="myT-rO-wz7" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="sUR-Ym-KMv"/>
+                            <constraint firstItem="oPz-9k-1Kw" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="wOc-sm-E0Q"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="SAILoadingView" id="LzD-gD-h27"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="15" y="220"/>
+        </scene>
+        <!--Basic Table View Controller-->
+        <scene sceneID="xxY-8h-n9l">
+            <objects>
+                <tableViewController id="Vjk-aH-aNM" customClass="BasicTableViewController" customModule="SAILoadingView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="P1e-T3-gYH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="gFy-Iz-ghk">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gFy-Iz-ghk" id="RNz-lQ-ZVP">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vjk-aH-aNM" id="jtU-Ss-T5e"/>
+                            <outlet property="delegate" destination="Vjk-aH-aNM" id="D5x-F7-tSl"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jvx-N8-Jlx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="220"/>
+        </scene>
+        <!--Error Table View Controller-->
+        <scene sceneID="Y2J-1q-XHP">
+            <objects>
+                <tableViewController id="moC-dL-cpW" customClass="ErrorTableViewController" customModule="SAILoadingView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Zx-fu-A7B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="H3a-iZ-6Iy">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H3a-iZ-6Iy" id="Z24-fc-UTr">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="moC-dL-cpW" id="Mv5-HA-Xe0"/>
+                            <outlet property="delegate" destination="moC-dL-cpW" id="Y4U-2P-zrG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fza-cB-jpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="-430"/>
+        </scene>
+        <!--Retry Table View Controller-->
+        <scene sceneID="VhS-5F-TE6">
+            <objects>
+                <tableViewController id="uNT-ia-i1x" customClass="RetryTableViewController" customModule="SAILoadingView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DAB-wV-1AD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="8PP-YX-Lds">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8PP-YX-Lds" id="T1k-NZ-y2B">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uNT-ia-i1x" id="i9k-nv-PWc"/>
+                            <outlet property="delegate" destination="uNT-ia-i1x" id="hEb-Me-cMg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Qr-Cj-uuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="888"/>
         </scene>
     </scenes>
 </document>

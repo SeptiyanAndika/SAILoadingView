@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		097261E51D4BEC3900AB9CEB /* RetryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097261E41D4BEC3900AB9CEB /* RetryTableViewController.swift */; };
+		097261E71D4BEEB300AB9CEB /* ErrorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097261E61D4BEEB300AB9CEB /* ErrorTableViewController.swift */; };
+		097261E91D4BEED600AB9CEB /* BasicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097261E81D4BEED600AB9CEB /* BasicTableViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		097261E41D4BEC3900AB9CEB /* RetryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetryTableViewController.swift; sourceTree = "<group>"; };
+		097261E61D4BEEB300AB9CEB /* ErrorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTableViewController.swift; sourceTree = "<group>"; };
+		097261E81D4BEED600AB9CEB /* BasicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTableViewController.swift; sourceTree = "<group>"; };
 		17232E1808CC7B242895DF94 /* Pods-SAILoadingView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAILoadingView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SAILoadingView_Example/Pods-SAILoadingView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1C77001862BAF77AB67B2CA3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		4432F3B7F48FB6337C68EDE0 /* Pods_SAILoadingView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SAILoadingView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +114,9 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				097261E41D4BEC3900AB9CEB /* RetryTableViewController.swift */,
+				097261E81D4BEED600AB9CEB /* BasicTableViewController.swift */,
+				097261E61D4BEEB300AB9CEB /* ErrorTableViewController.swift */,
 			);
 			name = "Example for SAILoadingView";
 			path = SAILoadingView;
@@ -360,7 +369,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				097261E51D4BEC3900AB9CEB /* RetryTableViewController.swift in Sources */,
+				097261E71D4BEEB300AB9CEB /* ErrorTableViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				097261E91D4BEED600AB9CEB /* BasicTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
