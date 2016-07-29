@@ -1,6 +1,0 @@
-framework module SAILoadingView {
-  umbrella header "SAILoadingView-umbrella.h"
-
-  export *
-  module * { export * }
-}
