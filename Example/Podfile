@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SAILoadingView_Example' do
+  pod 'SAILoadingView', :path => '../'
+
+  target 'SAILoadingView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
