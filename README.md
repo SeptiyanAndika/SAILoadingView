@@ -9,7 +9,7 @@
 
 ![Loading View Preview](https://raw.githubusercontent.com/SeptiyanAndika/SAILoadingView/master/Preview/loadingView.gif)
 ![Loading View](https://raw.githubusercontent.com/SeptiyanAndika/SAILoadingView/master/Preview/loading.png)
-![Error message](https://raw.githubusercontent.com/SeptiyanAndika/SAILoadingView/master/Preview/error.pnd)
+![Error message](https://raw.githubusercontent.com/SeptiyanAndika/SAILoadingView/master/Preview/error.png  | width=320)
 ![Error message With Retry Button](https://raw.githubusercontent.com/SeptiyanAndika/SAILoadingView/master/Preview/retry.png)
 
 ## Example
